@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<scroll-view scroll-y class="g-pos-rt assess-all">
+  <!-- <view class="assess-main-up s-pic" style="background-image:url('/asset/images/mainBackground.png')"></view> -->
+  <view>
+    <image class="assess-main-up s-pic" mode="aspectFill" src="/asset/images/mainBackground.png"></image>
+  </view>
+  <view><image class="s-pic assess-footer-bg g-pos-ab" src="/asset/images/footerBg.png"></image></view>
+  <assess-title class="g-pos-ab assess-title-main-pos" titlePic="{{titlePic}}" isResult="{{isResult}}" testTitle="{{testTitle}}"></assess-title>
+  <view class="g-mt-163 g-pl-70 g-pr-70">
+    <text class="g-taj s-fs-26 s-fc-1 s-fb-m g-flex g-flex-between s-fs-fz">{{testDes}}</text>
+  </view>
+  <assess-button class="g-mt-96 g-mb-65 g-flex g-flex-center" buttonText="{{buttonText}}" catchtap="toTestQuestion"></assess-button>
+  <view class="s-fs-24 s-fb-m s-fc-2 g-flex g-flex-center g-mb-30">注：商户公众号名称承诺，你所提交的信息将严格保密</view>
+  <!-- 底部图片 -->
+  <view class="g-mb-59">
+    <image class="assess-footer s-pic" mode="aspectFill" src="/asset/images/bookPic.jpg"></image>
+  </view>
+</scroll-view>

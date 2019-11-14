@@ -1,0 +1,42 @@
+.re-card-pa{
+  padding:50rpx 50rpx 60rpx 50rpx;
+  margin-left:70rpx;
+  margin-right:70rpx;
+}
+.left-top{
+  left:13rpx;
+  top:13rpx;
+  color:#FFFFFF
+}
+.right-top{
+  right:13rpx;
+  top:13rpx;
+}
+.left-bottom{
+  left:13rpx;
+  bottom:13rpx;
+}
+.right-bottom{
+  right:13rpx;
+  bottom:13rpx;
+}
+.icon-size{
+  width:80rpx;
+  height:80rpx;
+}
+.resu-card{
+  width:610rpx;
+  /* opacity: 0.1;
+  background: #FFFFFF; */
+  background-color:rgba(24,47,126);
+}
+.text-color{
+  color:#FFFFFF;
+  opacity:0.9;
+}
+.g-mt-11{
+  margin-top:11rpx;
+}
+.g-mt-1{
+  margin-top:1rpx;
+}

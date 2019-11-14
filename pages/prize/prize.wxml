@@ -1,0 +1,19 @@
+<view class="g-mt-33">
+  <!-- <prize-card></prize-card> -->
+  <view class="g-plr-30 g-mb-70 g-flex" wx:for="{{prizeList}}" wx:for-item="prizeItem" wx:key="item">
+      <image src="{{prizeItem.prizeImg}}" mode="aspectFill" class="s-pic prize-img g-br-10" catchtap="showPrizeDetail" data-prizeid="{{prizeItem.prizeid}}"></image>
+      <view class="g-flex g-flex-v g-pos-rt prize-right">
+        <view class="s-fs-30 s-fb s-fc-3 g-fw-b g-mb-16 g-taj">奖品名称：{{prizeItem.name}}</view>
+        <view class="s-fs-26 line-37 s-fc-3">奖品说明：{{prizeItem.explain}}</view>
+        <button wx:if="{{prizeItem.prizeStatus==1}}" form-type="submit" open-type="getPhoneNumber" bindgetphonenumber="getPhone" data-prizeid="{{prizeItem.prizeid}}"
+          class="g-mt-42 s-fs-26 line-37 recive-butotn g-flex g-flex-center g-flex-v-center">领取</button>
+        <view wx:if="{{prizeItem.prizeStatus==4}}" class="g-mt-12 s-fs-26 line-37 s-fc-3">SN：{{prizeItem.prizeNum}}</view>
+        <view wx:if="{{prizeItem.prizeStatus==2}}" class="g-mt-12 s-fs-26 line-37 s-fc-3">奖品状态：奖品已发完</view>
+        <view wx:if="{{prizeItem.prizeStatus==3}}" class="g-mt-12 s-fs-26 line-37 s-fc-3">奖品状态：发放中</view>
+      </view>
+    </view>
+</view>
+<!-- 奖品详细信息弹窗 -->
+<prize-detail-card showDetail="{{showDetail}}" selectedObj="{{selectedObj}}"></prize-detail-card>
+<!-- 填写信息弹窗 -->
+<prize-info-card selectedObj="{{selectedObj}}" showInformation="{{showInformation}}" phoneNumber="{{phoneNumber}}"></prize-info-card>

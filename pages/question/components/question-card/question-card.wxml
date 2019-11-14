@@ -1,0 +1,30 @@
+<swiper class="g-pos-rt g-h100"  current="{{currentTab}}">
+  <swiper-item wx:for="{{questionList}}" class="card-pa" wx:for-item="questionItem" wx:key="item" wx:for-index="index" catchtouchmove="catchTouchMove">
+    <image class="g-pos-ab s-pic question-topPic" mode="aspectFill" src="/asset/images/questionTop.png"></image>
+    <image class="g-pos-ab s-pic question-footerPic" mode="aspectFill" src="/asset/images/questionFooter.png"></image>
+    <view class="g-flex g-flex-v">
+      <view class="g-flex g-flex-v-end">
+        <view class="qus-title s-fc-wt s-fs-26 line-37 s-ff-symbol g-flex g-flex-v-center g-flex-center g-mr-10">第<text class="qus-number s-fs-34 s-ff-symbol"> 0{{questionItem.quesid+1}} </text>题</view>
+        <view class="s-ff-symbol s-fs-bd s-fs-24">共{{questionList.length}}题</view>
+      </view>
+      <view class="{{questionItem.qustion.length>19 ||item.answerType==0 ?'m-text':'s-text'}}">
+        <text class="s-fc-lblue s-ff-symbol g-taj ques-text {{questionItem.qustion.length>19 ||item.answerType==0?'s-fs-29':'s-fs-40'}}">{{questionItem.qustion}}</text>
+      </view>
+      
+      <!-- 问题答案是图片形式 -->
+      <view class="g-flex g-flex-center">
+        <view wx:if="{{questionItem.answerType==0}}" wx:for="{{questionItem.answerList}}" wx:for-item="answerItem" bindtap="selectAnswer" data-quesid="{{answerItem.quesid}}" data-ansid="{{ answerItem.ansid }}" wx:key="item" wx:for-index="index" 
+          class="answer-img-item g-flex g-flex-center g-br-10">
+          <image src="{{answerItem.answer}}" mode="aspectFill" class="s-pic answer-img g-br-10" 
+            style="border-color:{{questionItem.quesid==selectedList.quesid && selectedList.ansid==answerItem.ansid?'#3976F0;':'#F3F9FE'}}"></image>
+        </view>
+      </view>
+      <!-- 问题答案是文字形式 -->
+      <view wx:if="{{questionItem.answerType==1}}" wx:for="{{questionItem.answerList}}" wx:for-item="answerItem" bindtap="selectAnswer" data-quesid="{{answerItem.quesid}}" data-ansid="{{ answerItem.ansid }}" wx:key="item" wx:for-index="index" 
+        class="g-flex g-flex-v-center g-taj g-plr-30 answer-button g-br-10 g-mb-30 s-fc-lblack s-fb-m {{answerItem.answer.length>16?'g-ptb-17':'g-ptb-29 '}}"
+        style="background-color:{{questionItem.quesid==selectedList.quesid && selectedList.ansid==answerItem.ansid?'#3976F0;':'#F3F9FE'}}">
+        <view>{{answerItem.answer}}</view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

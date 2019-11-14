@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/question/question",
+    "pages/result/result",
+    "pages/prize/prize"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "香水测评",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取地理位置后可以体验更多功能"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

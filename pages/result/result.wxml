@@ -1,0 +1,10 @@
+<scroll-view scroll-y class="g-pos-rt assess-result-all">
+  <view>
+    <image class="g-w100 s-pic {{selectItem.hasPrize?'g-h-318':'g-h-338'}}" mode="aspectFill" src="/asset/images/questionBackground.png"></image>
+  </view>
+  <view><image class="s-pic assess-footer-bg g-pos-ab" src="/asset/images/footerBg.png"></image></view>
+  <assess-title class="g-pos-ab assess-title-result-pos" titlePic="{{titlePic}}" isResult="{{isResult}}" testTitle="{{testTitle}}"></assess-title>
+  <result-card class="" selectItem="{{selectItem}}"></result-card>
+  <image class="g-mt-20 g-ml-70 g-br-10 s-pic result-footer-pic" mode="aspectFill" src="/asset/images/bookPic.jpg"></image>
+  <view class="g-mt-30 s-fs-24 g-mb-77 s-fc-2 s-fb-m g-flex g-flex-center result-text">注：商户公众号名称承诺，你所提交的信息将严格保密</view>
+</scroll-view>

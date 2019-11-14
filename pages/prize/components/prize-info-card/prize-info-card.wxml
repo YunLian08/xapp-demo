@@ -1,0 +1,54 @@
+<!-- 填写信息 -->
+<view wx:if="{{showInformation}}" catchtouchmove="stopMove" class="preview-info-modal g-pos-rt g-flex g-flex-v g-flex-center g-flex-v-center">
+    <view class="prize-information-madal">
+      <view class="g-pos-rt">
+        <image class="s-pic info-bg-img" mode="aspectFill" src="/asset/images/infoBackground.png">
+          <view class="g-pos-ab sculpture-pos g-flex g-flex-center g-flex-v g-flex-v-center">
+            <!-- 获取用户头像、昵称 -->
+            <open-data class="sculpture-img" type="userAvatarUrl"></open-data>
+            <open-data class="g-mt-10 s-fb-m s-fs-40 s-fc-wt" type="userNickName"></open-data>
+            <!-- <image class="s-pic sculpture-img" mode="aspectFill" src="/asset/images/bookPic.jpg"></image> -->
+            <!-- <view class="g-mt-10 s-fb-m s-fs-40 s-fc-wt">Alex</view> -->
+          </view>
+        </image>
+      </view>
+      <scroll-view scroll-y class="info-main">
+        <view wx:for="{{infoList}}" wx:for-item="infoItem" wx:key="item" class="info-item g-pos-rt g-flex g-flex-v-center g-pos-rt">
+            <input  class="info-input-item g-pos-ab" placeholder-class="s-fs-bd s-fb-m info-item-placeholder" type="text" 
+            placeholder="{{infoItem.placeText}}" />
+        </view>
+        <view class="info-item g-pos-rt g-flex g-flex-v-center g-pos-rt">
+          <input bindfocus="getLocaltion" class="info-input-item g-pos-ab" placeholder-class="s-fs-bd s-fb-m info-item-placeholder" type="text" 
+            placeholder="邮寄地址" value="{{postAddress!=''?postAddress:''}}"/>
+        </view>
+        <view class="info-item g-pos-rt g-flex g-flex-v-center g-pos-rt">
+          <input  class="info-input-item g-pos-ab" placeholder-class="s-fs-bd s-fb-m info-item-placeholder" type="number" 
+            placeholder="手机号" value="{{phoneNumber!=0 ? phoneNumber:''}}"/>
+        </view>
+        <view class="info-item g-pos-rt g-flex g-flex-v-center g-pos-rt">
+          <input  class="info-input-item g-pos-ab" placeholder-class="s-fs-bd s-fb-m info-item-placeholder" type="number" 
+            placeholder="验证码" />
+            <view class="g-pos-ab get-code">获取验证码</view>
+        </view>  
+      </scroll-view>
+      <view class="info-footer g-flex g-flex-center g-flex-v-center">
+        <button class="confirm-button s-fb-m s-fc-wt g-flex g-flex-center g-flex-v-center" catchtap="infoConfirm">确认</button>
+      </view>
+    </view>
+    <view class="g-mt-50 g-flex g-flex-center" catchtap="hidePop">
+        <image class="close-icon g-pos-ab s-pic" mode="aspectFill" src="/asset/images/close.png"></image>
+    </view>
+</view>
+<!-- 提示弹窗 -->
+<view wx:if="{{showToastPop}}" catchtouchmove="stopMove" class="preview-info-modal g-pos-rt g-flex g-flex-v g-flex-center g-flex-v-center">
+  <view class="toast-pop-madal g-br-16 g-flex g-flex-center g-flex-v g-flex-v-center">
+    <image wx:if="{{selectedObj.convertStatus==0}}" class="s-pic success-img" mode="aspectFill" src="/asset/images/success.png"></image>
+    <image wx:if="{{selectedObj.convertStatus==1 || selectedObj.convertStatus==2}}" class="s-pic success-img" mode="aspectFill" src="/asset/images/fail.png"></image>
+    <view class="success-text s-fb-m">
+      {{selectedObj.convertStatus==0 ? '兑换成功' :(selectedObj.convertStatus==1?'今天你领了太多奖品，请明天再来':'你领了太多奖品，请下次活动再来')}}
+    </view>
+  </view>
+  <view class="g-mt-50 g-flex g-flex-center" catchtap="hidePop">
+      <image class="close-icon g-pos-ab s-pic" mode="aspectFill" src="/asset/images/close.png"></image>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<view class="g-pos-rt z-in-10">
+  <image class="s-pic button-img g-pos-rt" src="/asset/images/button.png"><span class="g-pos-ab img-text s-fb-m s-fc-wt">{{buttonText}}</span></image>
+</view>

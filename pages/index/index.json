@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText":"测评",
+  "usingComponents": {
+    "assess-button":"/components/assess-button/assess-button",
+    "assess-title":"/components/assess-title/assess-title"
+  }
+}

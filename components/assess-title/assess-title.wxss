@@ -1,0 +1,20 @@
+.assess-douhao{
+  width:54rpx;
+  height:50rpx;
+  top:0rpx;
+  left:0rpx;
+}
+.assess-ceping{
+  height:81rpx;
+  top:0rpx;
+  left:80rpx;
+}
+.pic-width-one{
+  width:160rpx;
+}
+.pic-width-two{
+  width:320rpx;
+}
+.assess-text{
+  margin-top:111rpx;
+}

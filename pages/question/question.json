@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText":"测评题目",
+  "usingComponents":{
+    "assess-title":"/components/assess-title/assess-title",
+    "question-card":"../components/question-card/question-card"
+  }
+}

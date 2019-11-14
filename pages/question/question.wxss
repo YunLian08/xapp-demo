@@ -1,0 +1,22 @@
+page{
+  background:-webkit-linear-gradient(top,#031E6C,#10277D,#10105B);
+  height:100%
+}
+.assess-test-all{
+  height:100%
+}
+.assess-main-up{
+  width:100%;
+  height:358rpx;
+}
+.assess-title-ques-pos{
+  top:88rpx;
+  left:70rpx;
+}
+.ques-card{
+  width:640rpx;
+  height:790rpx;
+  background-color:#FFFFFF;
+  box-shadow: 0 2px 20px 5px rgba(0,0,0,0.10);
+  border-radius: 16rpx;
+}

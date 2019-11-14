@@ -1,0 +1,11 @@
+<scroll-view scroll-y class="g-pos-rt assess-test-all">
+  <!-- <view class="assess-main-up s-pic" style="background-image:url('/asset/images/questionBackground.png')"></view> -->
+  <view>
+    <image class="assess-main-up s-pic" mode="aspectFill" src="/asset/images/questionBackground.png"></image>
+  </view>
+  <!-- <view class="assess-footer-bg g-pos-ab s-pic" style="background-image:url('../../asset/images/0_2波浪元素.png')"></view> -->
+  <assess-title class="g-pos-ab assess-title-ques-pos" titlePic="{{titlePic}}" isResult="{{isResult}}" testTitle="{{testTitle}}"></assess-title>
+  <question-card class="ques-card g-ml-55 g-pos-ab {{testTitle.length>12 ? 'g-mt-7' : 'g-mt-58'}}"></question-card>
+  
+    
+</scroll-view>

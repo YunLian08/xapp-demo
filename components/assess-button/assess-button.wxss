@@ -1,0 +1,18 @@
+.assess-arrow{
+  width:20rpx;
+  height:80rpx;
+  
+}
+.button-img{
+  width:349rpx;
+  height:80rpx;
+}
+.img-text{
+  top:18rpx;
+  left:125rpx;
+  font-size:30rpx;
+  line-height:42rpx;
+}
+.z-in-10{
+  z-index:10;
+}

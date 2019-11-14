@@ -1,0 +1,8 @@
+
+<view>
+  <view>
+      <image class="assess-douhao g-pos-ab g-mr-26 s-pic" mode="aspectFill" src="/asset/images/mainDouhao.png"></image>
+      <image class="assess-ceping g-pos-ab {{isResult?'pic-width-two':'pic-width-one'}}" src="{{titlePic}}"></image>
+  </view>
+  <view class="g-taj s-ff-symbol assess-text s-fc-wt {{testTitle.length>12?'s-fs-40':'s-fs-50'}} g-pr-70">{{testTitle}}</view>
+</view>

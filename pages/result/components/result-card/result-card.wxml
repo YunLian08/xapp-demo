@@ -1,0 +1,12 @@
+<view class="g-pos-rt re-card-pa resu-card g-br-10 {{selectItem.hasPrize?'g-mt-11':'g-mt-1'}}">
+  <image class="s-pic left-top icon-size g-pos-ab" src="/asset/images/result/1.png"></image>
+  <image class="s-pic right-top icon-size g-pos-ab" src="/asset/images/result/2.png"></image>
+  <image class="s-pic left-bottom icon-size g-pos-ab" src="/asset/images/result/3.png"></image>
+  <image class="s-pic right-bottom icon-size g-pos-ab" src="/asset/images/result/4.png"></image>
+  <view class="s-fs-26 text-color s-fb-m g-taj">
+    {{selectItem.resultDes}}
+  </view>
+  <view wx:if="{{selectItem.hasPrize}}" class="g-mt-70 g-flex g-flex-center" catchtap="toGetPrize">
+    <assess-button buttonText="{{buttonText}}"></assess-button>
+  </view>
+</view>

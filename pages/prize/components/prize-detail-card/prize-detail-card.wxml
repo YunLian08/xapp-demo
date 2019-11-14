@@ -1,0 +1,15 @@
+<view wx:if="{{showDetail}}" catchtouchmove="stopMove" class="preview-detail-modal g-pos-rt g-flex g-flex-v g-flex-center g-flex-v-center">
+  <view class="prize-detail-modal g-br-16">
+    <image class="s-pic prize-detail-img" mode="aspectFill" src="{{selectedObj.prizeImg}}"></image>
+    <view class="prize-detail-bottom">
+      <view class="s-fs-30 s-fb s-fc-3 g-fw-b g-taj {{selectedObj.name.length>17?'g-mb-28':'g-mb-30'}}">奖品名称：{{selectedObj.name}}</view>
+      <view class="s-fs-26 s-fc-3 g-mb-16 {{selectedObj.explain.length>20?'line-42':'line-37'}}">奖品说明：{{selectedObj.explain}}</view>
+      <view wx:if="{{selectedObj.prizeStatus==4}}" class="g-mt-12 s-fs-26 line-37 s-fc-3">SN：{{selectedObj.prizeNum}}</view>
+      <view wx:if="{{selectedObj.prizeStatus==2}}" class="g-mt-12 s-fs-26 line-37 s-fc-3">奖品状态：奖品已发完</view>
+      <view wx:if="{{selectedObj.prizeStatus==3}}" class="g-mt-12 s-fs-26 line-37 s-fc-3">奖品状态：发放中</view>
+    </view>
+  </view>
+  <view class="g-mt-50 g-flex g-flex-center" catchtap="hidePop">
+    <image class="close-icon g-pos-ab s-pic" mode="aspectFill" src="/asset/images/close.png"></image>
+  </view>
+</view>
