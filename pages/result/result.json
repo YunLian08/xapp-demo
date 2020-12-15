@@ -2,7 +2,7 @@
   "navigationBarTitleText":"测评结果",
   "usingComponents":{
     "assess-title":"/components/assess-title/assess-title",
-    "result-card":"../components/result-card/result-card",
+    "result-card":"./components/result-card/result-card",
     "assess-button":"/components/assess-button/assess-button"
   }
 }

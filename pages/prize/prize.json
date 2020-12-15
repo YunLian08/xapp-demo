@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText":"奖品",
   "usingComponents":{
-    "prize-detail-card":"../components/prize-detail-card/prize-detail-card",
-    "prize-info-card":"../components/prize-info-card/prize-info-card"
+    "prize-detail-card":"./components/prize-detail-card/prize-detail-card",
+    "prize-info-card":"./components/prize-info-card/prize-info-card"
   }
 }
